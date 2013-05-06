@@ -50,7 +50,7 @@
                         <asp:MenuItem NavigateUrl="~/Upload.aspx" Text="Upload" Value="Uplod">
                         
                         </asp:MenuItem>
-                        <asp:MenuItem NavigateUrl="~/galeria.aspx" Text="Galeria" Value="Galeria"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/Default2.aspx.vb" Text="Galeria" Value="Galeria"></asp:MenuItem>
                     </Items>
                 </asp:Menu>
             </div>
