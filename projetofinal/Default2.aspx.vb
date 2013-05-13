@@ -6,7 +6,7 @@ Partial Class _Default
         Dim vetor As Byte()
 
         If FileUpload.PostedFile Is Nothing Then
-            lblStatus.Text = "Nenhum arquivo definido."
+            LoginStatus.Text = "Nenhum arquivo definido."
             Exit Sub
         Else
 
@@ -33,9 +33,9 @@ Partial Class _Default
             FileUpload.PostedFile.InputStream.Read(vetor, 0, tamanho)
 
             If salvaImagem(txtTituloImagem.Text.Trim, vetor, tamanho, imgTipo) = True Then
-                lblStatus.Text = "Imagem enviada com sucesso..."
+                LoginStatus.Text = "Imagem enviada com sucesso..."
             Else
-                lblStatus.Text = "Ocorreu um erro durante o envio da imagem... Tente novamente..."
+                LoginStatus.Text = "Ocorreu um erro durante o envio da imagem... Tente novamente..."
             End If
         End If
     End Sub
