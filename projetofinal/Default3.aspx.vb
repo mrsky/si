@@ -8,7 +8,7 @@ Partial Class Default3
         Dim vetor As Byte()
 
         If FileUpload.PostedFile Is Nothing Then
-            FileUpLoad.Text = "Nenhum arquivo definido."
+            FileUpLoad = "Nenhum arquivo definido."
             Exit Sub
         Else
 

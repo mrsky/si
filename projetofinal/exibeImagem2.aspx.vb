@@ -1,4 +1,5 @@
 ﻿Imports System.Data
+Imports System.Data.SqlClient
 
 Partial Class exibeImagem2
     Inherits System.Web.UI.Page
