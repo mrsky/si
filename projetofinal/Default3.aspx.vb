@@ -2,21 +2,21 @@
 Partial Class Default3
     Inherits System.Web.UI.Page
 
-    Protected Sub btnEnviaArquivo_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles btnEnviaArquivo.Click
+    Protected Sub btnEnviaArquivo_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles btnEnviaFicheiro.Click
 
         Dim tamanho As Integer
         Dim vetor As Byte()
 
-        If FileUpload.PostedFile Is Nothing Then
-            FileUpLoad = "Nenhum arquivo definido."
+        If FileUpLoad.PostedFile Is Nothing Then
+            lblStatus.Text = "Nenhum arquivo definido."
             Exit Sub
         Else
 
-            Dim nomeArquivo As String = FileUpload.PostedFile.FileName
+            Dim nomeArquivo As String = FileUpLoad.PostedFile.FileName
             Dim ext As String = nomeArquivo.Substring(nomeArquivo.LastIndexOf("."))
             ext = ext.ToLower
 
-            Dim imgTipo = FileUpload.PostedFile.ContentType
+            Dim imgTipo = FileUpLoad.PostedFile.ContentType
 
             If ext = ".jpg" Then
             ElseIf ext = ".bmp" Then
@@ -25,19 +25,19 @@ Partial Class Default3
             ElseIf ext = "bmp" Then
             ElseIf ext = "gif" Then
             Else
-                FileUpLoad.Text = "Somente são suportados arquivos nos formatos: gif, bmp, ou jpg."
+                lblStatus.Text = "Somente são suportados arquivos nos formatos: gif, bmp, ou jpg."
                 Exit Sub
             End If
 
-            tamanho = Convert.ToInt32(FileUpload.PostedFile.InputStream.Length)
+            tamanho = Convert.ToInt32(FileUpLoad.PostedFile.InputStream.Length)
             ReDim vetor(tamanho)
 
-            FileUpload.PostedFile.InputStream.Read(vetor, 0, tamanho)
+            FileUpLoad.PostedFile.InputStream.Read(vetor, 0, tamanho)
 
-            If salvaImagem(txtTituloImagem.Text.Trim, vetor, tamanho, imgTipo) = True Then
-                FileUpLoad.Text = "Imagem enviada com sucesso..."
+            If SalvaImagem(txtTituloImagem.Text.Trim, vetor, tamanho, imgTipo) = True Then
+                lblStatus.Text = "Imagem enviada com sucesso..."
             Else
-                FileUpLoad.Text = "Ocorreu um erro durante o envio da imagem... Tente novamente..."
+                lblStatus.Text = "Ocorreu um erro durante o envio da imagem... Tente novamente..."
             End If
         End If
     End Sub
