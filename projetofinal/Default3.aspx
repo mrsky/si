@@ -17,7 +17,7 @@
                 <asp:FileUpload ID="FileUpLoad" runat="server" />
                 <br />
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" 
-                    ErrorMessage="RequiredFieldValidator"></asp:RequiredFieldValidator>
+                    ErrorMessage="RequiredFieldValidator" ControlToValidate="FileUpLoad"></asp:RequiredFieldValidator>
             </td>
         </tr>
         <tr>
@@ -25,9 +25,9 @@
                 Titulo da Imagem</td>
             <td>
                 <asp:TextBox ID="txtTituloImage" runat="server" Width="262px"></asp:TextBox>
-                <br />
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" 
-                    ErrorMessage="RequiredFieldValidator"></asp:RequiredFieldValidator>
+                    ErrorMessage="RequiredFieldValidator" ControlToValidate="txtTituloImage"></asp:RequiredFieldValidator>
+                <br />
             </td>
         </tr>
         <tr>

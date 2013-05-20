@@ -23,7 +23,7 @@
                         <asp:RoleGroup Roles="Admin">
                             <ContentTemplate>
                                 <asp:HyperLink ID="HyperLink1" runat="server" 
-                            NavigateUrl="~/Cmd/inseririmagem.aspx">aaa</asp:HyperLink>
+                            NavigateUrl="~/Cmd/inseririmagem.aspx">Listagem</asp:HyperLink>
                             </ContentTemplate>
                         </asp:RoleGroup>
                     </RoleGroups>
