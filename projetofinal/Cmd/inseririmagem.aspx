@@ -3,24 +3,35 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" Runat="Server">
-    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" 
-        DataKeyNames="ApplicationId" DataSourceID="SqlDataSource1">
+    <asp:GridView ID="imgGrid" runat="server" AllowPaging="True" 
+        AllowSorting="True" AutoGenerateColumns="False" BackColor="#DEBA84" 
+        BorderColor="#DEBA84" BorderStyle="None" BorderWidth="1px" CellPadding="3" 
+        CellSpacing="2" DataKeyNames="imagemID" DataSourceID="SqlDataSource1">
         <Columns>
-            <asp:BoundField DataField="ApplicationName" HeaderText="ApplicationName" 
-                SortExpression="ApplicationName" />
-            <asp:BoundField DataField="LoweredApplicationName" 
-                HeaderText="LoweredApplicationName" SortExpression="LoweredApplicationName" />
-            <asp:BoundField DataField="ApplicationId" HeaderText="ApplicationId" 
-                ReadOnly="True" SortExpression="ApplicationId" />
-            <asp:BoundField DataField="Description" HeaderText="Description" 
-                SortExpression="Description" />
+            <asp:CommandField ShowSelectButton="True" />
+            <asp:BoundField DataField="imagemID" HeaderText="imagemID" 
+                InsertVisible="False" ReadOnly="True" SortExpression="imagemID" />
+            <asp:BoundField DataField="imagemTitulo" HeaderText="imagemTitulo" 
+                SortExpression="imagemTitulo" />
+            <asp:BoundField DataField="imagemTipo" HeaderText="imagemTipo" 
+                SortExpression="imagemTipo" />
+            <asp:BoundField DataField="imagemTamanho" HeaderText="imagemTamanho" 
+                SortExpression="imagemTamanho" />
         </Columns>
-    </asp:GridView>
+        <FooterStyle BackColor="#F7DFB5" ForeColor="#8C4510" />
+        <HeaderStyle BackColor="#A55129" Font-Bold="True" ForeColor="White" />
+        <PagerStyle ForeColor="#8C4510" HorizontalAlign="Center" />
+        <RowStyle BackColor="#FFF7E7" ForeColor="#8C4510" />
+        <SelectedRowStyle BackColor="#738A9C" Font-Bold="True" ForeColor="White" />
+        <SortedAscendingCellStyle BackColor="#FFF1D4" />
+        <SortedAscendingHeaderStyle BackColor="#B95C30" />
+        <SortedDescendingCellStyle BackColor="#F1E5CE" />
+        <SortedDescendingHeaderStyle BackColor="#93451F" />
+        </asp:GridView>
     <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
-        ConnectionString="Data Source=.\SQLEXPRESS;AttachDbFilename=|DataDirectory|\ASPNETDB.MDF;Integrated Security=True;User Instance=True" 
+        ConnectionString="Data Source=.\SQLEXPRESS;AttachDbFilename=|DataDirectory|\ImagensBD.mdf;Integrated Security=True;User Instance=True" 
         ProviderName="System.Data.SqlClient" 
-        SelectCommand="SELECT * FROM [vw_aspnet_Applications]"></asp:SqlDataSource>
-    <asp:DetailsView ID="DetailsView1" runat="server" Height="50px" Width="125px">
-    </asp:DetailsView>
+        SelectCommand="SELECT [imagem], [imagemID], [imagemTitulo], [imagemTipo], [imagemTamanho] FROM [Imagens]">
+    </asp:SqlDataSource>
 </asp:Content>
 

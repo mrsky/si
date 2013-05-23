@@ -34,7 +34,7 @@ Partial Class Default3
 
             FileUpLoad.PostedFile.InputStream.Read(vetor, 0, tamanho)
 
-            If SalvaImagem(txtTituloImagem.Text.Trim, vetor, tamanho, imgTipo) = True Then
+            If SalvaImagem(txtTituloImage.Text.Trim, vetor, tamanho, imgTipo) = True Then
                 lblStatus.Text = "Imagem enviada com sucesso..."
             Else
                 lblStatus.Text = "Ocorreu um erro durante o envio da imagem... Tente novamente..."
@@ -88,8 +88,5 @@ Partial Class Default3
         End Try
     End Function
 
-    Private Function txtTituloImagem() As Object
-        Throw New NotImplementedException
-    End Function
 
 End Class
