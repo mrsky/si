@@ -1,7 +1,12 @@
 ﻿Imports System.Data
+Imports System.Data.SqlClient
 
 Partial Class trataImagem2
     Inherits System.Web.UI.Page
+
+    Private Property strSql As Object
+  
+
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
 
@@ -32,4 +37,5 @@ Partial Class trataImagem2
 
     End Sub
 
+   
 End Class

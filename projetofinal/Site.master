@@ -18,6 +18,12 @@
                 </h1>
             </div>
             <div class="loginDisplay">
+                <asp:LoginView ID="LoginView2" runat="server">
+                    <LoggedInTemplate>
+                        <asp:HyperLink ID="dados" runat="server" 
+                            NavigateUrl="~/Account/ChangePassword.aspx">Dados Utilizador</asp:HyperLink>
+                    </LoggedInTemplate>
+                </asp:LoginView>
                 <asp:LoginView ID="LoginView1" runat="server">
                     <RoleGroups>
                         <asp:RoleGroup Roles="Admin">
@@ -47,10 +53,8 @@
                     <Items>
                         <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Home"/>
                         <asp:MenuItem NavigateUrl="~/About.aspx" Text="About"/>
-                        <asp:MenuItem NavigateUrl="~/Upload.aspx" Text="Upload" Value="Uplod">
                         
-                        </asp:MenuItem>
-                        <asp:MenuItem NavigateUrl="~/Default3.aspx" Text="Galeria" Value="Galeria"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/Cmd/Default3.aspx" Text="Galeria" Value="Galeria"></asp:MenuItem>
                     </Items>
                 </asp:Menu>
             </div>

@@ -8,9 +8,6 @@
     <br />
     <br />
     <br />
-    <asp:LinkButton ID="LinkButton1" runat="server" 
-    PostBackUrl="~/Cmd/inseririmagem.aspx">LinkButton</asp:LinkButton>
-    <br />
     <br />
     <br />
     <br />
