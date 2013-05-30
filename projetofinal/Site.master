@@ -18,10 +18,19 @@
                 </h1>
             </div>
             <div class="loginDisplay">
+                <asp:LoginView ID="LoginView3" runat="server">
+                    <RoleGroups>
+                        <asp:RoleGroup Roles="Admin">
+                            <ContentTemplate>
+                                <asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="~/trataImagem2.aspx">Dados da Imagem</asp:HyperLink>
+                            </ContentTemplate>
+                        </asp:RoleGroup>
+                    </RoleGroups>
+                </asp:LoginView>
                 <asp:LoginView ID="LoginView2" runat="server">
                     <LoggedInTemplate>
                         <asp:HyperLink ID="dados" runat="server" 
-                            NavigateUrl="~/Account/ChangePassword.aspx">Dados Utilizador</asp:HyperLink>
+                            NavigateUrl="~/Account/ChangePassword.aspx">Alterar Password</asp:HyperLink>
                     </LoggedInTemplate>
                 </asp:LoginView>
                 <asp:LoginView ID="LoginView1" runat="server">
@@ -29,7 +38,7 @@
                         <asp:RoleGroup Roles="Admin">
                             <ContentTemplate>
                                 <asp:HyperLink ID="HyperLink1" runat="server" 
-                            NavigateUrl="~/Cmd/inseririmagem.aspx">Listagem</asp:HyperLink>
+                            NavigateUrl="~/Cmd/Default3.aspx">Listagem</asp:HyperLink>
                             </ContentTemplate>
                         </asp:RoleGroup>
                     </RoleGroups>
@@ -54,7 +63,7 @@
                         <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Home"/>
                         <asp:MenuItem NavigateUrl="~/About.aspx" Text="About"/>
                         
-                        <asp:MenuItem NavigateUrl="~/Cmd/Default3.aspx" Text="Galeria" Value="Galeria"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/exibeImagem2.aspx" Text="Galeria" Value="Galeria"></asp:MenuItem>
                     </Items>
                 </asp:Menu>
             </div>
