@@ -38,7 +38,7 @@
                         <asp:RoleGroup Roles="Admin">
                             <ContentTemplate>
                                 <asp:HyperLink ID="HyperLink1" runat="server" 
-                            NavigateUrl="~/Cmd/Default3.aspx">Listagem</asp:HyperLink>
+                            NavigateUrl="~/Cmd/Default3.aspx">Listar Imagens</asp:HyperLink>
                             </ContentTemplate>
                         </asp:RoleGroup>
                     </RoleGroups>
@@ -61,7 +61,7 @@
                 <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" EnableViewState="false" IncludeStyleBlock="false" Orientation="Horizontal">
                     <Items>
                         <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Home"/>
-                        <asp:MenuItem NavigateUrl="~/About.aspx" Text="About"/>
+                        <asp:MenuItem NavigateUrl="~/About.aspx" Text="Notícias"/>
                         
                         <asp:MenuItem NavigateUrl="~/exibeImagem2.aspx" Text="Galeria" Value="Galeria"></asp:MenuItem>
                     </Items>
